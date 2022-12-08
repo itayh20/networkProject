@@ -11,7 +11,7 @@ class Computer {
         this.sendBtn = document.createElement("button");
         this.i = i + 1
 
-        this.sendBtn.addEventListener("click", this.sendPackage.bind(this))
+        this.sendBtn.addEventListener("click",()=>delayFunction(this.sendPackage.bind(this)))
     }
     buildComputer() {
         this.div.setAttribute("id", "c" + this.i)
@@ -134,3 +134,6 @@ function convertFromBinary(str) {
 // let a = "michael"
 // convertToBinary(a)
 // console.log(arrayOfComputers);
+function delayFunction(func){
+    setTimeout(func, 3000)
+}
