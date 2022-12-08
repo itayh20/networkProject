@@ -1,0 +1,21 @@
+main{
+    border: 1px solid black;
+}
+
+div{
+    align-items: flex-start;
+    align-self: center;
+    width: 50vw;
+    height: 20vh;
+    border: 1px solid blue;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:  1fr 1fr 1fr;
+}
+
+p{
+    background-color: brown;
+    align-self: flex-end;
+    width: 5vw;
+    height: 8vh;
+}
