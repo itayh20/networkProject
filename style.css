@@ -1,21 +1,73 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+}
+
 main{
     border: 1px solid black;
+    flex: 3;
 }
 
 div{
     align-items: flex-start;
-    align-self: center;
-    width: 50vw;
-    height: 20vh;
+    grid-area: d;
+    /* width: 50vw; */
+    /* height: 20vh; */
     border: 1px solid blue;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows:  1fr 1fr 1fr;
+    grid-template-areas: 
+    't p'
+    'i p'
+    'b p'
+    ;
+
+}
+
+input{
+    grid-area: i;
+}
+
+textarea{
+    grid-area: t;
+}
+
+button{
+    grid-area: b;
 }
 
 p{
-    background-color: brown;
-    align-self: flex-end;
-    width: 5vw;
-    height: 8vh;
+    margin: 1vw;
+    grid-area: p;
+    background-color: beige;
+    width: auto; 
+    height: 80%;
+    
+}
+
+#switchR{
+    flex: 1;
+
+    /* margin-left:auto; */
+    /* width: 20vw; */
+    /* height: calc(20vh*3); */
+}
+
+#cables{
+    flex: 2;
+    border: 2px solid red;
+    /* width: 80%; */
+    /* height: calc(20vh*3); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.cable{
+    width: 100%;
+    height: 2vh;
 }
